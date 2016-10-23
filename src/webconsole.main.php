@@ -146,13 +146,13 @@ class WebConsoleRPCServer extends BaseJsonRpcServer {
 
         $home_directory_found = false;
         global $HOME_DIRECTORY;
-        global $USER_HOME_DIRECTORY;
-        if(!empty($USER_HOME_DIRECTORY) && !empty($USER_HOME_DIRECTORY[$user])){
-            if(is_dir($USER_HOME_DIRECTORY[$user])){
-                $result['environment']['path'] = $USER_HOME_DIRECTORY[$user];
+        global $USER_HOME_DIRECTORIES;
+        if(!empty($USER_HOME_DIRECTORIES) && !empty($USER_HOME_DIRECTORIES[$user])){
+            if(is_dir($USER_HOME_DIRECTORIES[$user])){
+                $result['environment']['path'] = $USER_HOME_DIRECTORIES[$user];
                 $home_directory_found = true;
             }
-            else $result['output'] = "User home directory not found: ". $USER_HOME_DIRECTORY[$user];
+            else $result['output'] = "User home directory not found: ". $USER_HOME_DIRECTORIES[$user];
         }
 
         if(!empty($HOME_DIRECTORY) && !$home_directory_found) {

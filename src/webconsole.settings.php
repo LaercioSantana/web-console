@@ -18,8 +18,8 @@ $ACCOUNTS = array();
 // Home directory (absolute or relative path)
 $HOME_DIRECTORY = '';
 
-// Multi-user home directory
-//Example: $USER_HOME_DIRECTORY = array('user1' => '/home/user1', 'user2' => '/home/user2');
+// Multi-user home directories
+//Example: $USER_HOME_DIRECTORIES = array('user1' => '/home/user1', 'user2' => '/home/user2');
 
 // Code below is automatically generated from different components
 // For more information see: https://github.com/nickola/web-console
